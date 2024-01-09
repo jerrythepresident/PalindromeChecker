@@ -23,20 +23,19 @@ public boolean palindrome(String sWord)
 }
 public String reverse(String sWord)
 {
-  String result = new String();
-  sWord.toLowerCase();
-   for(int i = 0; i < sWord.length(); i++){
-   if(!sWord.substring(i,i+1).equals(" ")){
-   result=result + sWord.substring(i,i+1);
-   }
-   }
-     for(int i = 0; i < sWord.length(); i++){
-    if(Character.isLetter(sWord.charAt(i))){
-      result = result + sWord.substring(i,i+1);
-    }
-     }
-  for(int i = sWord.length()-1; i>=0; i--){
-    result=result+sWord.charAt(i);
+  String result = new String(); 
+  String result1 = new String();
+  String result2 = new String();
+  String result3 = new String();
+  result=sWord.toLowerCase();
+  for(int i = 0; i < result.length(); i++)
+     if(!result.substring(i,i+1).equals(" "))
+       result1=result1 + result.substring(i,i+1);
+  for(int i = 0; i < result1.length(); i++)
+    if(Character.isLetter(result1.charAt(i)))
+      result2 = result2 + result1.substring(i,i+1);
+  for(int i = result2.length()-1; i>=0; i--){
+    result3=result3+result2.charAt(i);
   }
-  return result;
+  return result3;
 }
